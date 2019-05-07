@@ -1,0 +1,51 @@
+{
+    "title": "OpenCage Geocoder",
+    "description": "Worldwide forward and reverse geocoding",
+    "docsUrl": "https://opencagedata.com/api",
+    "url": "https://api.apis.guru/v2/specs/opencagedata.com/1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.opencagedata.com/geocode",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_v_version___format_": {
+            "main": "./lib/actions/get_v_version___format_.js",
+            "title": "geocode a query",
+            "description": "geocode a query",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v_version___format_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

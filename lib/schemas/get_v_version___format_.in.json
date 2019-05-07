@@ -1,0 +1,60 @@
+{
+    "type": "object",
+    "properties": {
+        "version": {
+            "required": true,
+            "type": "integer"
+        },
+        "format": {
+            "required": true,
+            "type": "string"
+        },
+        "q": {
+            "required": true,
+            "type": "string"
+        },
+        "key": {
+            "required": true,
+            "type": "string"
+        },
+        "abbrv": {
+            "type": "boolean"
+        },
+        "add_request": {
+            "type": "boolean"
+        },
+        "bounds": {
+            "type": "string"
+        },
+        "countrycode": {
+            "type": "string"
+        },
+        "jsonp": {
+            "type": "string"
+        },
+        "language": {
+            "type": "string"
+        },
+        "limit": {
+            "type": "integer"
+        },
+        "min_confidence": {
+            "type": "integer"
+        },
+        "no_annotations": {
+            "type": "boolean"
+        },
+        "no_dedupe": {
+            "type": "boolean"
+        },
+        "no_record": {
+            "type": "boolean"
+        },
+        "pretty": {
+            "type": "boolean"
+        },
+        "proximity": {
+            "type": "string"
+        }
+    }
+}
